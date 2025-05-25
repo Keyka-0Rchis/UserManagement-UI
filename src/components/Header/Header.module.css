@@ -1,0 +1,11 @@
+.header{
+    height: fit-content;
+    display: flex;
+}
+.bars{
+    color: black;
+    display: block;
+    font-size: 32px;
+    margin: auto 25px;
+}
+

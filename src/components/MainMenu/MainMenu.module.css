@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+
+.mainmenu{
+    padding: 40px 10px;
+}
+.mainmenuWrapper{
+    display: flex;
+}
+.menuIcon{
+    height: 100px;
+    width: 200px;
+    background-color: aqua;
+    border-radius: 20px;
+    margin: auto 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+.iconPrint{
+    font-weight: bold;
+    font-size: 25px;
+}
