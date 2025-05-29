@@ -3,6 +3,8 @@
 }
 
 .mainmenu{
+    width: 70%;
+    transition: width 0.3s ease;
     padding: 40px 10px;
 }
 .mainmenuWrapper{

@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
+import SideMenu from './components/SideMenu/SideMenu';
 import MainMenu from './components/MainMenu/MainMenu';
 
 function App() {
@@ -18,7 +19,21 @@ function App() {
         <Header title="ユーザー管理するよ！" onMenuClick = {toggleSideMenu}/>
       </div>
       <div className='main'>
-        <MainMenu addTitle="ユーザー追加" deleteTitle="ユーザー削除" viewTitle="ユーザー閲覧"/>
+        <div className='inner'>
+          <div className='mainContainer'>
+            <SideMenu titles={{
+              add: "ユーザー登録",
+              delete: "ユーザー削除",
+              view: "ユーザー閲覧"
+            }}
+              isOpen = {SideMenuOpen}/>
+            <MainMenu titles={{
+              add: "ユーザー登録",
+              delete: "ユーザー削除",
+              view: "ユーザー閲覧"
+            }}/>
+          </div>
+        </div>
       </div>
     </>
   );
