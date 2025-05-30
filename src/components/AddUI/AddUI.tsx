@@ -1,28 +1,23 @@
 import React from 'react';
-import styles from './SideMenu.module.css'
-import { title } from 'process';
+import styles from './AddUI.module.css'
 
-//modeでつかうSideModeを定義
-type SideMode = 'mainmenu' | 'add' | 'delete' | 'view';
+type MenuMode = 'delete' | 'view';
 
-function SideMenu (
+function AddUI (
     props:{
-        titles:{mainmenu:string,add:string,delete:string,view:string}
-        onSelect?:(mode:SideMode) => void
+        titles:{delete:string,view:string}
+        onSelect?:(mode:MenuMode) => void}
         //add,delete,stringのタイトルを設定させる。
         //onSelectはまだよくわかんない
-        isOpen:boolean}
 ){
-    const items:{mode:SideMode ; title:string;iconStyle:string}[]=[
-        {mode:'mainmenu',title:props.titles.mainmenu,iconStyle:styles.mainmenuIcon},
-        {mode:'add',title:props.titles.add,iconStyle:styles.addIcon},
+    const items:{mode:MenuMode ; title:string;iconStyle:string}[]=[
         {mode:'delete',title:props.titles.delete,iconStyle:styles.deleteIcon},
         {mode:'view',title:props.titles.view,iconStyle:styles.viewIcon}
     ]
     //この後forループっぽくするために、一つ一つのmode毎に変数をまとめておく。
     return (
-        <div className={props.isOpen? styles.sidemenuOpen:styles.sidemenuClose}>
-            <div className={styles.sidemenuWrapper}>
+        <div className={styles.mainmenu}>
+            <div className={styles.mainmenuWrapper}>
                 {items.map((item) =>(
                     <div
                         key={item.mode} 
@@ -37,4 +32,4 @@ function SideMenu (
     );
 }
 
-export default SideMenu;
+export default AddUI;
