@@ -33,7 +33,7 @@ function MainMenu (
             </div>
         </div>
 ////自分で書いたやつ。繰り返しが多いって。。。        
-/*         <div className={styles.mainmenu}>
+/*      <div className={styles.mainmenu}>
             <div className={styles.mainmenuWrapper}>
                 <div className={`${styles.menuIcon} ${styles.addIcon}`}>
                     <p className={styles.iconPrint}>{props.addTitle}</p>

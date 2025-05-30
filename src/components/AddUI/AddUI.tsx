@@ -5,28 +5,23 @@ type MenuMode = 'delete' | 'view';
 
 function AddUI (
     props:{
-        titles:{delete:string,view:string}
-        onSelect?:(mode:MenuMode) => void}
-        //add,delete,stringのタイトルを設定させる。
-        //onSelectはまだよくわかんない
+
+    }
 ){
-    const items:{mode:MenuMode ; title:string;iconStyle:string}[]=[
-        {mode:'delete',title:props.titles.delete,iconStyle:styles.deleteIcon},
-        {mode:'view',title:props.titles.view,iconStyle:styles.viewIcon}
-    ]
-    //この後forループっぽくするために、一つ一つのmode毎に変数をまとめておく。
     return (
-        <div className={styles.mainmenu}>
-            <div className={styles.mainmenuWrapper}>
-                {items.map((item) =>(
-                    <div
-                        key={item.mode} 
-                        className={`${styles.menuIcon} ${item.iconStyle}`}
-                        onClick={()=>props.onSelect?.(item.mode)}
-                    >
-                        <p className={styles.iconPrint}>{item.title}</p>
-                    </div>
-                ))}
+        <div className={styles.AddUI}>
+            <div className={styles.AddUIWrapper}>
+                <form className="addUserForm">
+                    <fieldset className="addUserFormField">
+                        <legend>ユーザー登録</legend>
+                        <label htmlFor="userName">名前</label>
+                        <input type="text" name="userName" id="userName"></input>
+                        <label htmlFor="userEmail">メールアドレス</label>
+                        <input type="email" name="userEmail" id="userEmail"></input>
+                        <button id="addSubmit" type="submit">実行</button>
+                        <button type="reset">リセット</button>
+                    </fieldset>
+                </form>
             </div>
         </div>
     );

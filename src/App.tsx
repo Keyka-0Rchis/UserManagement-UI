@@ -36,7 +36,8 @@ function App() {
             }}
               onSelect = {setMode}
               isOpen = {SideMenuOpen}/>
-            {Mode === "mainmenu" &&            
+            {/* ブラウザの戻るボタンが使えないなどの問題が発覚したので、useStateではなく、routerを用いた書き方に修正 */}
+            {/* {Mode === "mainmenu" &&            
               <MainMenu titles={{
                 add: "ユーザー登録",
                 delete: "ユーザー削除",
@@ -45,12 +46,8 @@ function App() {
                 onSelect = {setMode}/>
             }            
             {Mode === "add" &&
-              <AddUI titles={{
-                delete: "ユーザー削除",
-                view: "ユーザー閲覧"
-              }}
-                onSelect = {setMode}/>
-            }
+              <AddUI />
+             } */}
 
           </div>
         </div>
