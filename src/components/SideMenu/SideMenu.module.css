@@ -12,9 +12,12 @@
 }
 
 .menuIcon{
+    display: block;
     border-bottom: 1px gray solid;
     font-size: 24px;
     padding-left: 20px;
+    text-decoration: none;
+    color: inherit;
 }
 .iconPrint{
     white-space: nowrap; /*改行禁止*/

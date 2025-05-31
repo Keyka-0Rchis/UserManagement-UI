@@ -1,8 +1,6 @@
 import React from 'react';
 import styles from './AddUI.module.css'
 
-type MenuMode = 'delete' | 'view';
-
 function AddUI (
     props:{
 

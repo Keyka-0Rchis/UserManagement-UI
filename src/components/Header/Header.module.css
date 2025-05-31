@@ -8,4 +8,8 @@
     font-size: 32px;
     margin: auto 25px;
 }
+.titleLink{
+    text-decoration: none;
+    color: inherit;
+}
 
