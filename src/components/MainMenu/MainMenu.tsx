@@ -27,6 +27,7 @@ function MainMenu (
         <div className={styles.mainmenu}>
             <div className={styles.mainmenuWrapper}>
                 {items.map((item) =>(
+                    //遷移はLinkタグを使う。表示はaタグ扱い。toで行き先を指定。
                     <Link
                         to={item.mode}
                         key={item.mode} 

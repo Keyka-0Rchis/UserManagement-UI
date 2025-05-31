@@ -25,6 +25,7 @@ function App() {
     //Mode Stateはmainmenuからスタート。メイン画面を変更する。
 
   return (
+    //Routerタグは一番外！
     <Router>
       <div className="header">
         <Header 
@@ -55,6 +56,7 @@ function App() {
             {Mode === "add" &&
               <AddUI />
             } */}
+            {/* Routesの中に分岐を書く。Routeにそれぞれのパスとコンポーネントを。 */}
             <Routes>
               <Route 
                 path="/mainmenu"
